@@ -195,6 +195,21 @@ img {
   fill: var(--accent-color);
 }
 
+.nav-item {
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
 /* ============= END HEADER ============= */
 
 /* ============= HERO ============= */
@@ -334,6 +349,42 @@ img {
 
 .we-doing-list .item:last-child {
   margin-right: 0;
+}
+
+.we-doing-thumb {
+  position: relative;
+}
+
+.we-doing-product {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.product-name {
+  font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+/* text-align: center; */
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: var(--primary-background-color);
+}
+
+/* .we-doing-list:hover .we-doing-product {
+  opacity: 1;
+} */
+
+.item:hover .we-doing-product {
+  opacity: 1;
 }
 
 /* ============= END What are we doing ============= */
@@ -639,5 +690,38 @@ img {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+
+.gallery-photo-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--primary-background-color); 
+}
+
+.gallery-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+}
+
+
+/* .gallery-photo::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+} */
 
 /* ============= END GALLERY  ============= */
