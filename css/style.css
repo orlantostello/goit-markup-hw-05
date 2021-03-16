@@ -7,6 +7,7 @@
   --primary-background-color: #ffffff;
   --back-color: #2f303a;
   --color-filter: #f5f4fa;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* outline: 2px solid tomato; */
@@ -145,6 +146,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   display: inline-block;
+   transition: color 250ms var(--timing-function);
 }
 
 .nav-link:hover,
@@ -178,6 +180,7 @@ img {
   display: flex;
   align-items: center;
   fill: currentcolor;
+  transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .contact-logo-mail {
@@ -271,6 +274,7 @@ img {
   border-style: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+   transition: color 250ms var(--timing-function);
 }
 
 .modal-btn:hover,
@@ -366,6 +370,7 @@ img {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  transition: opacity 250ms var(--timing-function);
 }
 
 .product-name {
@@ -379,9 +384,6 @@ text-transform: uppercase;
 color: var(--primary-background-color);
 }
 
-/* .we-doing-list:hover .we-doing-product {
-  opacity: 1;
-} */
 
 .item:hover .we-doing-product {
   opacity: 1;
@@ -466,6 +468,7 @@ color: var(--primary-background-color);
   justify-content: center;
   border-radius: 50%;
   fill: #afb1b8;
+  transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .social-link:hover,
@@ -504,6 +507,7 @@ color: var(--primary-background-color);
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
+  transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -589,6 +593,7 @@ color: var(--primary-background-color);
   border-radius: 50%;
   fill: var(--primary-background-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-icon-link:hover,
@@ -633,6 +638,7 @@ color: var(--primary-background-color);
 
   min-width: 73px;
   border-style: none;
+  transition: box-shadow 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .modal-btn-filter:hover,
@@ -658,6 +664,7 @@ color: var(--primary-background-color);
 .gallery-list-item {
   margin: 15px;
   width: 370px;
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .gallery-list-item:hover {
@@ -711,9 +718,14 @@ color: var(--primary-background-color);
   width: 100%;
   height: 100%;
   padding: 63px 24px;
-  background: rgba(33, 150, 243, 0.9);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 }
 
+.gallery-list-link:hover .gallery-overlay {
+  transform: translateY(0);
+}
 
 /* .gallery-photo::before {
   display: inline-block;
@@ -722,6 +734,70 @@ color: var(--primary-background-color);
   width: 100%;
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 } */
 
 /* ============= END GALLERY  ============= */
+
+/* ============= BACKDROP ============= */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  
+  opacity: 1;
+  transition: transform 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 250ms var(--timing-function);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-width: 528px;
+  min-height: 581px;  
+  
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+  0px 1px 1px rgba(0, 0, 0, 0.14), 
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.modal-button {  
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 8px;  
+  
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;  
+  background: var(--primary-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  
+}
+
+
+
+
+/* =============END BACKDROP ============= */
