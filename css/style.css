@@ -146,7 +146,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   display: inline-block;
-   transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .nav-link:hover,
@@ -276,7 +276,7 @@ img {
   border-style: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-   transition: color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .modal-btn:hover,
@@ -377,15 +377,14 @@ img {
 
 .product-name {
   font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-/* text-align: center; */
-letter-spacing: 0.03em;
-text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  /* text-align: center; */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-color: var(--primary-background-color);
+  color: var(--primary-background-color);
 }
-
 
 .item:hover .we-doing-product {
   opacity: 1;
@@ -470,7 +469,8 @@ color: var(--primary-background-color);
   justify-content: center;
   border-radius: 50%;
   fill: #afb1b8;
-  transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 
 .social-link:hover,
@@ -509,7 +509,8 @@ color: var(--primary-background-color);
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
-  transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -640,7 +641,9 @@ color: var(--primary-background-color);
 
   min-width: 73px;
   border-style: none;
-  transition: box-shadow 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function),
+    color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 
 .modal-btn-filter:hover,
@@ -705,7 +708,7 @@ color: var(--primary-background-color);
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
-  color: var(--primary-background-color); 
+  color: var(--primary-background-color);
 }
 
 .gallery-photo {
@@ -751,7 +754,7 @@ color: var(--primary-background-color);
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  
+
   opacity: 1;
 }
 
@@ -759,13 +762,13 @@ color: var(--primary-background-color);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: opacity 250ms var(--timing-function), pointer-events 250ms var(--timing-function), visibility 250ms var(--timing-function);
-  
+  transition: opacity 250ms var(--timing-function),
+    pointer-events 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.6);
-    
 }
 
 .modal {
@@ -774,35 +777,30 @@ color: var(--primary-background-color);
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   min-width: 528px;
-  min-height: 581px;  
-  
+  min-height: 581px;
+
   background-color: var(--primary-background-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-  0px 1px 1px rgba(0, 0, 0, 0.14), 
-  0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 2;
   transition: transform 250ms var(--timing-function);
 }
 
-.modal-button {  
+.modal-button {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   top: 8px;
-  right: 8px;  
-  
+  right: 8px;
+
   width: 30px;
   height: 30px;
-  border-radius: 50%;  
+  border-radius: 50%;
   background: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  
 }
-
-
-
 
 /* =============END BACKDROP ============= */
